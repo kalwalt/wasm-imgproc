@@ -1,0 +1,39 @@
+{
+  "name": "wasm-imgproc-app",
+  "version": "0.1.0",
+  "description": "A simple wasm app build with rustwasm. It display a noisy image.",
+  "main": "index.js",
+  "bin": {
+    "create-wasm-app": ".bin/create-wasm-app.js"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalwalt/rust-wasm-projects.git"
+  },
+  "keywords": [
+    "webassembly",
+    "wasm",
+    "rust",
+    "webpack"
+  ],
+  "author": "kalwalt github@kalwaltart.it",
+  "license": "(MIT OR Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/kalwalt/rust-wasm-projects/issues"
+  },
+  "homepage": "https://github.com/kalwalt/rust-wasm-projects#readme",
+  "dependencies": {
+    "wasm_imgproc": "file:../pkg"
+  },
+  "devDependencies": {
+    "hello-wasm-pack": "^0.1.0",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "copy-webpack-plugin": "^5.0.0"
+  }
+}
