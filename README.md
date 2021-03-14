@@ -1,3 +1,20 @@
+# WASM-IMGPROC
+This is a simple example to test wasm-bingden and imgproc 🦀🕸 crate.
+This project was bootsrapped with the wasm-pack-template (wasm-pack). You can clone, fork and modify the repository.
+
+## Instructions
+You need to build the **pkg** folder, where all the wasm files are stored.
+Follow these steps:
+In the root folder run:
+`wasm-pack build`
+then:
+```
+cd www
+npm install
+npm run start
+```
+If you make changes, you need to run the `wasm-pack build` command and the steps above. 
+
 <div align="center">
 
   <h1><code>wasm-pack-template</code></h1>

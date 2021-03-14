@@ -4,7 +4,7 @@ use wasm_bindgen::prelude::*;
 use imageproc::utils::gray_bench_image;
 use imageproc::filter::gaussian_blur_f32;
 use imageproc::noise::salt_and_pepper_noise;
-use image::{Luma, ImageBuffer, DynamicImage};
+use image::{DynamicImage};
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -14,6 +14,7 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
 pub fn image_create(width: u32, height: u32) -> Vec<u8> {
+    utils::set_panic_hook();
     let image = gray_bench_image(width, height);
     let noised_image = salt_and_pepper_noise(&image, 0.3, 14);
     let sigma = 0.8;
