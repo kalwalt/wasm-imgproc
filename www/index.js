@@ -9,4 +9,3 @@ let imageData = ctx.createImageData(100,100)
 console.log(imageData);
 imageData.data.set(img);
 ctx.putImageData(imageData, 100, 100)
-
